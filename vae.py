@@ -59,4 +59,10 @@ def initialize_training_set(): # N or batch size??
 
     return [images, chosen_attributes]
 
-training_set = initizalixe_training_set()
+#training_set = initizalixe_training_set()
+
+# Showing possible attributes
+attributes = get_attribute_names(PATH + ATTRIBUTES)
+
+for i in range(len(attributes)):
+    print(i, attributes[i])

@@ -65,8 +65,8 @@ def initialize_training_set(): # N or batch size??
 
     return [resized_images, chosen_attributes]
 
-training_set = initialize_training_set()
-print(training_set)
+#training_set = initialize_training_set()
+#print(training_set)
 
 class Sampling(Layer):
   def call(self, inputs):
@@ -178,6 +178,11 @@ def VAE():
 
 vae, encoder, decoder = VAE()
 
-encoder.summary()
-decoder.summary()
+#encoder.summary()
+#decoder.summary()
 
+# Showing possible attributes
+attributes = get_attribute_names(PATH + ATTRIBUTES)
+
+for i in range(len(attributes)):
+    print(i, attributes[i])
